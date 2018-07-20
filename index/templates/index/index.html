@@ -1,10 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+  
+  <meta charset="utf-8" />
+  <title>kafkal's blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+
+  <!-- Stylesheets -->
+  <link href="style/bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/font-awesome.css" />
+  <link href="style/prettyPhoto.css" rel="stylesheet" />
+  <!-- Parallax slider -->
+  <link rel="stylesheet" href="style/slider.css" />
+  <!-- Flexslider -->
+  <link rel="stylesheet" href="style/flexslider.css" />
+
+  <link href="style/style.css" rel="stylesheet" />
+
+  <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
+  <link href="style/lblue.css" rel="stylesheet" />
+
+  <link href="style/bootstrap-responsive.css" rel="stylesheet" />
+  
+  <!-- HTML5 Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shim.js"></script>
+  <![endif]-->
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon/favicon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
 <body>
+
+<!-- Header Starts -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <div class="logo">
+          <h1><a href="#">kafkal's <span class="color">blog</span></a></h1>
+          <div class="hmeta">独立思想,自由精神</div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="form">
+          <form method="get" id="searchform" action="#" class="form-search" />
+            <input type="text" value="" name="s" id="s" class="input-medium" />
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation bar starts -->
+          <div class="navbar">
+           <div class="navbar-inner">
+             <div class="container">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                 <span>Menu</span>
+               </a>
+               <div class="nav-collapse collapse">
+                 <ul class="nav">
+                   <li><a href="index.html">首页</a></li>
+                   <li><a href="index1.html">博客</a></li>
+                   <!-- Refer Bootstrap navbar doc -->
+                   <!--
+                   <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #1 <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="landing-page.html">Landing Page</a></li>
+                        <li><a href="pricing.html">Pricing Table</a></li>
+                        <li><a href="service-3.html">Service</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="register1.html">Register</a></li>
+                        <li><a href="login1.html">Login</a></li>
+                      </ul>
+                   </li>              
+                   <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #2<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                        <li><a href="features-4.html">Features</a></li>
+                        <li><a href="statement.html">Statement</a></li>
+                        <li><a href="tasks.html">Tasks</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="make-post.html">Make Post</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="error-log.html">Error Log</a></li>
+                      </ul>
+                   </li>
+                   <-->
+                   <!--
+                   <li>
+                   <a href="service.html">Service</a></li>
+                   -->
+                   <li><a href="aboutus.html">简介</a></li>
+                   <!--
+                   <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="blog-2.html">Blog #1</a></li>
+                        <li><a href="blog-4.html">Blog #1</a></li>
+                        <li><a href="blog-single.html">Blog Single</a></li>
+                      </ul>
+                    </li>
+                                        
+                   <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="contactus.html">Contact</a></li>
+                   -->
+                 </ul>
+               </div>
+              </div>
+           </div>
+         </div>
+
+<!-- Navigation bar ends -->
+
+<!-- Slider starts -->
+  
+    <div class="full-slider">
+        <!-- Slider (Flex Slider) -->
+          
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+                <div class="flexslider">
+                  <ul class="slides">
+
+                    <li>
+                      
+                      <!-- Slider content -->
+                      <div class="flex-caption">
+                        <!-- Left column -->
+                        <div class="col-l">
+                          
+                            <h2><a style="color:#FFFFFF" href="/blog/{{blog[0].id}}/">{{blog[0].title}}</a></h2>
+                            <h6>{{blog[0].date}}</h6>
+                     
+
+                        </div>
+                        <!-- Right column -->
+                        <div class="col-r">
+
+                          <!-- Use the class "flex-back" to add background inside flex slider -->
+                         
+                            <h5>{{blog[0].keywords}}</h5>
+                            <p>{{blog[0].text}}</p>
+                          
+
+                          <!-- Button -->
+                          <div class="button">
+                            <a href="/blog/{{blog[0].id}}/">阅 读</a>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </li>
+
+                    <li>
+                      <div class="flex-caption flex-center">
+                        <h2><a style="color:#FFFFFF" href="/blog/{{blog[1].id}}/">{{{blog[1].title}}</a></h2>
+
+                        <p>{{blog[1].text}}</p>
+
+                          <!-- Button -->
+                          <div class="button">
+                            <a href="/blog/{{blog[1].id}}/">阅 读</a>
+                          </div>
+
+                      </div>
+                    </li>
+
+                    
+                    <li>
+                      
+                      <!-- Slider content -->
+                      <div class="flex-caption">
+                        <!-- Left column -->
+                        <div class="col-l">
+                          <h2><a style="color:#FFFFFF" href="/blog/{{blog[2].id}}/">{{blog[2].title}}</a></h2>
+                          <h6>{{blog[2].date}}</h6>
+
+                          <!-- Button -->
+                          <div class="button">
+                            <a href="/blog/{{blog[2].id}}/"><阅 读</a>
+                          </div>
+
+                        </div>
+                        <!-- Right column -->
+                        <div class="col-r">
+
+                          <!-- Use the class "flex-back" to add background inside flex slider -->
+                          <div class="flex-back">
+                            <h5>{{blog[2].keywords</h5>
+                            <p>{{blog[2].text}}</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </li>
+
+                    <!--
+                    <li>
+
+                      <!-- Slider content -->
+                    <!--
+                      <div class="flex-caption">
+                        <!-- Left column -->
+                    <!--
+                        <div class="col-l">
+                          <h2></h2>
+                          <h6>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.Vivamus vel ultricies elit.</h6>
+
+
+
+                        </div>
+                        <!-- Right column -->
+                      <!--
+                        <div class="col-r">
+
+                          <!-- Use the class "flex-back" to add background inside flex slider -->
+                          
+                      <!--
+                            <h2>Nulla Vitae Rhoncus</h2>
+                            <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
+                         
+
+                        </div>
+                      </div>
+
+                    </li>
+                    -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+<!-- Slider Ends -->
+
+<div class="content">
+  <div class="container">
+
+
+    <!-- Hero Unit -->
+
+    <div class="row center">
+      <div class="span12">
+
+        <div class="bor"></div>
+
+        <h2>kafkal用来练手的小站</h2>
+        <p>分享、学习、积累、进步</p>
+        <div class="bor"></div>
+        <hr />
+      </div>  
+    </div>
+
+    <!-- Hero Ends -->      
+
+
+    <div class="row">
+      <div class="span12">
+
+        <div class="bor"></div>
+
+        <!-- Image blocks starts -->
+
+        <ul class="hover-block">
+
+          <li>
+
+            <a href="https://www.python.org/" target="_blank">
+              <!-- Image -->
+              <img src="img/photos/tn_1.jpg" alt="" /> 
+              <!-- Content with background color Class -->
+              <div class="hover-content b-orange">
+                <h6>Python</h6>
+                Python is the best programming language！
+              </div>
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a href="https://www.djangoproject.com/" target="_blank">
+              <img src="img/photos/tn_2.jpg" alt="" /> 
+              <div class="hover-content b-green">
+                <h6>Django</h6>
+                The web framework for perfectionists with deadlines.
+              </div>
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a href="https://ljalphabeta.gitbooks.io/python-/content/" target="_blank">
+              <img src="img/photos/tn_3.jpg" alt="" /> 
+              <div class="hover-content b-purple">
+                <h6>Machine Learning</h6>
+                Machine learning is a subset of artificial intelligence in the field of computer science that often uses statistical techniques to give computers the ability to "learn" 
+              </div>
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a href="https://www.google.com/" target="_blank">
+              <img src="img/photos/tn_4.jpg" alt="" /> 
+              <div class="hover-content b-lblue">
+                <h6>Google</h6>
+                科学上网，多用谷歌！Using Google more!
+              </div>
+            </a>
+
+          </li>            
+
+        </ul>
+
+        <div class="clearfix"></div>
+
+        <!-- Image blocks ends -->
+      </div>
+    </div>
+
+<div class="bor"></div>
+
+<hr />
+
+<!-- Discover starts -->
+
+  <div class="discover">
+    <div class="row">
+      <div class="span12">
+        <h3>发现</h3>
+        <div class="big grey">多问多读多练</div>
+          <div class="dis-nav button">
+            <a href="#" id="one">Github</a> 
+            <a href="https://stackoverflow.com/"id="two">Stack Overflow</a> 
+          </div>
+
+          <div class="dis-content">
+            <div class="one">
+                <h3>Github</h3>
+                <h5>Build software better,together.</h5>
+                <p>GitHub Inc. is a web-based hosting service for version control using Git. </p>
+                <a class="btn btn-warning" onclick="window.open('https://github.com/')">访问</a>
+            </div>
+            <div class="two">
+                <h3>Stack Overflow</h3>
+                <p>Stack Overflow is a privately held website, the flagship site of the Stack Exchange Network,created in 2008 by Jeff Atwood and Joel Spolsky.It was created to be a more open alternative to earlier question and answer sites such as Experts-Exchange. The name for the website was chosen by voting in April 2008 by readers of Coding Horror, Atwood's popular programming blog.</p>
+                <a class="btn btn-warning" onclick="window.open('https://www.stackoverflow.com/')">访问</a> 
+            </div>           
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Disconver ends --> 
+<hr />
+    <div>
+      <h3>博文</h3>
+      <ul>
+      {% for x in blog %}
+        <li><a href="/blog/{{blog[0].id}}/"><h4>{{blog[0].title}}</h4></a></li>
+        <p>{{blog[0].text}}</p>
+      {% endfor %}
+      </ul>
+
+  </div>
+</div>
+
+<!-- Social -->
+
+<div class="social-links">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <p class="big"><span>Follow Us On</span> <a href="#"><i class="icon-facebook"></i>Facebook</a> <a href="#"><i class="icon-twitter"></i>Twitter</a> <a href="#"><i class="icon-google-plus"></i>Google Plus</a> <a href="#"><i class="icon-linkedin"></i>LinkedIn</a></p>
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="widgets">
+        <div class="span4">
+          <div class="fwidget">
+
+            <div class="col-l">
+              <h6>Downlaods</h6>
+              <ul>
+                <li><a href="#">Condimentum</a></li>
+                <li><a href="#">Etiam at</a></li>
+                <li><a href="#">Fusce vel</a></li>
+                <li><a href="#">Vivamus</a></li>
+                <li><a href="#">Pellentesque</a></li>
+              </ul>
+            </div>
+
+            <div class="col-r">
+              <h6>Support</h6>
+              <ul>
+                <li><a href="#">Condimentum</a></li>
+                <li><a href="#">Etiam at</a></li>
+                <li><a href="#">Fusce vel</a></li>
+                <li><a href="#">Vivamus</a></li>
+                <li><a href="#">Pellentesque</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="fwidget">
+            <h6>Categories</h6>
+            <ul>
+              <li><a href="#">Condimentum - Condimentum gravida</a></li>
+              <li><a href="#">Etiam at - Condimentum gravida</a></li>
+              <li><a href="#">Fusce vel - Condimentum gravida</a></li>
+              <li><a href="#">Vivamus - Condimentum gravida</a></li>
+              <li><a href="#">Pellentesque - Condimentum gravida</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="fwidget">
+            <h6>Recent Posts</h6>
+            <ul>
+              <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
+              <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
+              <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
+              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
+              <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="span12">
+          <div class="copy">
+            <h6>Metro <span class="color">Mania</span></h6>
+            <p>Copyright &copy; <a href="#">Your Site</a> - <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
+          </div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</footer> 
+
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script> 
+<script src="js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
+<script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
+<script src="js/jquery.cslider.js"></script> <!-- Parallax slider -->
+<script src="js/modernizr.custom.28468.js"></script>
+<script src="js/filter.js"></script> <!-- Filter for support page -->
+<script src="js/cycle.js"></script> <!-- Cycle slider -->
+<script src="js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+
+<script src="js/easing.js"></script> <!-- Easing -->
+<script src="js/custom.js"></script>
 
 </body>
 </html>

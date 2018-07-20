@@ -5,6 +5,6 @@ from . import views
 
 app_name = 'index'
 
-urlpattrens = [
-    path('',views.IndexView,name = 'index')
+urlpatterns = [
+    path('',views.IndexView,name = 'index'),
 ]
