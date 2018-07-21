@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,32 +10,57 @@
   <meta name="keywords" content="" />
   <meta name="author" content="" />
 
-
   <!-- Stylesheets -->
-  <link href="style/bootstrap.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style/font-awesome.css" />
-  <link href="style/prettyPhoto.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="{% static 'index/style/bootstrap.css' %}" rel="stylesheet" />
+  <link href="{% static 'index/style/prettyPhoto.css' %}" rel="stylesheet"/>
   <!-- Parallax slider -->
-  <link rel="stylesheet" href="style/slider.css" />
+  <link rel="stylesheet" href="{% static 'index/style/slider.css' %}" />
   <!-- Flexslider -->
-  <link rel="stylesheet" href="style/flexslider.css" />
+  <link rel="stylesheet" href="{% static 'index/style/flexslider.css' %}" />
 
-  <link href="style/style.css" rel="stylesheet" />
+  <link href="{% static 'index/style/style.css' %}" rel="stylesheet" />
 
   <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
-  <link href="style/lblue.css" rel="stylesheet" />
+  <link href="{% static 'index/style/lblue.css' %}" rel="stylesheet" />
 
-  <link href="style/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="{% static 'index/style/bootstrap-responsive.css' %}" rel="stylesheet" />
   
   <!-- HTML5 Support for IE -->
   <!--[if lt IE 9]>
-  <script src="js/html5shim.js"></script>
+  <script src="{% static 'index/index/js/html5shim.js' %}"></script>
   <![endif]-->
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon/favicon.png" />
+  <link rel="shortcut icon" href="{% static 'index/img/favicon/Kafka.png'%}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-
+<style type="text/css">
+    .text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .titletext{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width:600px;
+    }
+    .indextitle{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .indextext{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+</style>
 <body>
 
 <!-- Header Starts -->
@@ -68,58 +94,9 @@
                </a>
                <div class="nav-collapse collapse">
                  <ul class="nav">
-                   <li><a href="index.html">首页</a></li>
-                   <li><a href="index1.html">博客</a></li>
-                   <!-- Refer Bootstrap navbar doc -->
-                   <!--
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #1 <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="landing-page.html">Landing Page</a></li>
-                        <li><a href="pricing.html">Pricing Table</a></li>
-                        <li><a href="service-3.html">Service</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="register1.html">Register</a></li>
-                        <li><a href="login1.html">Login</a></li>
-                      </ul>
-                   </li>              
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #2<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                        <li><a href="features-4.html">Features</a></li>
-                        <li><a href="statement.html">Statement</a></li>
-                        <li><a href="tasks.html">Tasks</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="make-post.html">Make Post</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="error-log.html">Error Log</a></li>
-                      </ul>
-                   </li>
-                   <-->
-                   <!--
-                   <li>
-                   <a href="service.html">Service</a></li>
-                   -->
+                   <li><a href="{% url 'index:index' %}">首页</a></li>
+                   <li><a href="{% url 'blog:index' %}">博客</a></li>
                    <li><a href="aboutus.html">简介</a></li>
-                   <!--
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="blog-2.html">Blog #1</a></li>
-                        <li><a href="blog-4.html">Blog #1</a></li>
-                        <li><a href="blog-single.html">Blog Single</a></li>
-                      </ul>
-                    </li>
-                                        
-                   <li><a href="portfolio.html">Portfolio</a></li>
-                   <li><a href="contactus.html">Contact</a></li>
-                   -->
                  </ul>
                </div>
               </div>
@@ -132,119 +109,65 @@
   
     <div class="full-slider">
         <!-- Slider (Flex Slider) -->
-          
           <div class="container">
             <div class="row">
               <div class="span12">
                 <div class="flexslider">
                   <ul class="slides">
-
                     <li>
-                      
                       <!-- Slider content -->
                       <div class="flex-caption">
                         <!-- Left column -->
                         <div class="col-l">
-                          
-                            <h2><a style="color:#FFFFFF" href="/blog/{{blog[0].id}}/">{{blog[0].title}}</a></h2>
-                            <h6>{{blog[0].date}}</h6>
-                     
-
+                            <h2 class="indextitle"><a style="color:#FFFFFF" href="{% url 'blog:detail' blog1.id %}">{{blog1.title}}</a></h2>
+                            <h6>{{blog1.date}}</h6>
                         </div>
                         <!-- Right column -->
                         <div class="col-r">
-
                           <!-- Use the class "flex-back" to add background inside flex slider -->
-                         
-                            <h5>{{blog[0].keywords}}</h5>
-                            <p>{{blog[0].text}}</p>
-                          
-
+                            <h5>{{blog1.keywords}}</h5>
+                            <p class="indextext">{{blog1.text}}</p>
                           <!-- Button -->
                           <div class="button">
-                            <a href="/blog/{{blog[0].id}}/">阅 读</a>
+                            <a href="/blog/{{blog1.id}}/">阅 读</a>
                           </div>
-
                         </div>
                       </div>
-
                     </li>
 
                     <li>
                       <div class="flex-caption flex-center">
-                        <h2><a style="color:#FFFFFF" href="/blog/{{blog[1].id}}/">{{{blog[1].title}}</a></h2>
-
-                        <p>{{blog[1].text}}</p>
-
+                        <h2 class="indextitle"><a style="color:#FFFFFF" href="{% url 'blog:detail' blog2.id %}">{{blog2.title}}</a></h2>
+                        <p class="indextext">{{blog2.text}}</p>
                           <!-- Button -->
                           <div class="button">
-                            <a href="/blog/{{blog[1].id}}/">阅 读</a>
+                            <a href="/blog/{{blog2.id}}/">阅 读</a>
                           </div>
-
                       </div>
                     </li>
 
-                    
                     <li>
-                      
                       <!-- Slider content -->
                       <div class="flex-caption">
                         <!-- Left column -->
                         <div class="col-l">
-                          <h2><a style="color:#FFFFFF" href="/blog/{{blog[2].id}}/">{{blog[2].title}}</a></h2>
-                          <h6>{{blog[2].date}}</h6>
-
+                          <h2 class="indextitle"><a style="color:#FFFFFF" href="{% url 'blog:detail' blog3.id %}">{{blog3.title}}</a></h2>
+                          <h6>{{blog3.date}}</h6>
                           <!-- Button -->
                           <div class="button">
-                            <a href="/blog/{{blog[2].id}}/"><阅 读</a>
+                            <a href="/blog/{{blog3.id}}/">阅 读</a>
                           </div>
-
                         </div>
                         <!-- Right column -->
                         <div class="col-r">
-
                           <!-- Use the class "flex-back" to add background inside flex slider -->
                           <div class="flex-back">
-                            <h5>{{blog[2].keywords</h5>
-                            <p>{{blog[2].text}}</p>
+                            <h5>{{blog3.keywords}}</h5>
+                            <p class="indextext">{{blog3.text}}</p>
                           </div>
-
                         </div>
                       </div>
-
                     </li>
-
-                    <!--
-                    <li>
-
-                      <!-- Slider content -->
-                    <!--
-                      <div class="flex-caption">
-                        <!-- Left column -->
-                    <!--
-                        <div class="col-l">
-                          <h2></h2>
-                          <h6>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.Vivamus vel ultricies elit.</h6>
-
-
-
-                        </div>
-                        <!-- Right column -->
-                      <!--
-                        <div class="col-r">
-
-                          <!-- Use the class "flex-back" to add background inside flex slider -->
-                          
-                      <!--
-                            <h2>Nulla Vitae Rhoncus</h2>
-                            <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-                         
-
-                        </div>
-                      </div>
-
-                    </li>
-                    -->
                   </ul>
                 </div>
               </div>
@@ -288,21 +211,17 @@
 
             <a href="https://www.python.org/" target="_blank">
               <!-- Image -->
-              <img src="img/photos/tn_1.jpg" alt="" /> 
+              <img src="{% static 'index/img/photos/tn_1.jpg' %}" alt="" />
               <!-- Content with background color Class -->
               <div class="hover-content b-orange">
                 <h6>Python</h6>
                 Python is the best programming language！
               </div>
             </a>
-
           </li>
-
-
           <li>
-
             <a href="https://www.djangoproject.com/" target="_blank">
-              <img src="img/photos/tn_2.jpg" alt="" /> 
+              <img src="{% static 'index/img/photos/tn_2.jpg' %}" alt="" />
               <div class="hover-content b-green">
                 <h6>Django</h6>
                 The web framework for perfectionists with deadlines.
@@ -315,7 +234,7 @@
           <li>
 
             <a href="https://ljalphabeta.gitbooks.io/python-/content/" target="_blank">
-              <img src="img/photos/tn_3.jpg" alt="" /> 
+              <img src="{% static 'index/img/photos/tn_3.jpg'%}" alt="" />
               <div class="hover-content b-purple">
                 <h6>Machine Learning</h6>
                 Machine learning is a subset of artificial intelligence in the field of computer science that often uses statistical techniques to give computers the ability to "learn" 
@@ -328,7 +247,7 @@
           <li>
 
             <a href="https://www.google.com/" target="_blank">
-              <img src="img/photos/tn_4.jpg" alt="" /> 
+              <img src="{% static 'index/img/photos/tn_4.jpg' %}" alt="" />
               <div class="hover-content b-lblue">
                 <h6>Google</h6>
                 科学上网，多用谷歌！Using Google more!
@@ -382,10 +301,12 @@
 <hr />
     <div>
       <h3>博文</h3>
+      <hr/>
       <ul>
-      {% for x in blog %}
-        <li><a href="/blog/{{blog[0].id}}/"><h4>{{blog[0].title}}</h4></a></li>
-        <p>{{blog[0].text}}</p>
+      {% for x in blog_list %}
+        <li><a href="{% url 'blog:detail' x.id %}"><h4 class="titletext">{{x.title}}</h4></a><h5>{{ x.date }}</h5></li>
+        <p class="text">{{x.text}}</p>
+        <hr/>
       {% endfor %}
       </ul>
 
@@ -398,7 +319,8 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <p class="big"><span>Follow Us On</span> <a href="#"><i class="icon-facebook"></i>Facebook</a> <a href="#"><i class="icon-twitter"></i>Twitter</a> <a href="#"><i class="icon-google-plus"></i>Google Plus</a> <a href="#"><i class="icon-linkedin"></i>LinkedIn</a></p>
+          <p class="big"><span>Follow Me On</span> <a href="https://github.com/mtp1997411" target="_blank"><i class="fa fa-github"></i>Github</a><a href="https://weibo.com/u/2211865032" target="_blank"><i class="fa fa-weibo"></i>Weibo</a>
+              <span>Relex</span><a href="https://music.163.com/#/playlist?id=423085978" target="_blank"><i class="fa fa-music"></i>网易云音乐</a></p>
       </div>
     </div>    
   </div>
@@ -478,18 +400,19 @@
 </footer> 
 
 <!-- JS -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script> 
-<script src="js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
-<script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
-<script src="js/jquery.cslider.js"></script> <!-- Parallax slider -->
-<script src="js/modernizr.custom.28468.js"></script>
-<script src="js/filter.js"></script> <!-- Filter for support page -->
-<script src="js/cycle.js"></script> <!-- Cycle slider -->
-<script src="js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+<script src="{% static 'index/js/jquery.js'%}"></script>
+<script src="{% static 'index/js/bootstrap.js'%}"></script>
+<script src="{% static 'index/js/jquery.isotope.js'%}"></script> <!-- Isotope for gallery -->
+<script src="{% static 'index/js/jquery.prettyPhoto.js'%}"></script> <!-- prettyPhoto for images -->
+<script src="{% static 'index/js/jquery.cslider.js'%}"></script> <!-- Parallax slider -->
+<script src="{% static 'index/js/modernizr.custom.28468.js'%}"></script>
+<script src="{% static 'index/js/filter.js'%}"></script> <!-- Filter for support page -->
+<script src="{% static 'index/js/cycle.js'%}"></script> <!-- Cycle slider -->
+<script src="{% static 'index/js/jquery.flexslider-min.js'%}"></script> <!-- Flex slider -->
 
-<script src="js/easing.js"></script> <!-- Easing -->
-<script src="js/custom.js"></script>
+<script src="{% static 'index/js/easing.js'%}"></script> <!-- Easing -->
+<script src="{% static 'index/js/custom.js'%}"></script>
 
+</div>
 </body>
 </html>
