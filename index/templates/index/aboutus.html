@@ -1,0 +1,274 @@
+{% load static %}
+{% load spacify %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <title>kafkal's blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="{% static 'index/style/bootstrap.css' %}" rel="stylesheet" />
+  <link href="{% static 'index/style/prettyPhoto.css' %}" rel="stylesheet"/>
+  <!-- Parallax slider -->
+  <link rel="stylesheet" href="{% static 'index/style/slider.css' %}" />
+  <!-- Flexslider -->
+  <link rel="stylesheet" href="{% static 'index/style/flexslider.css' %}" />
+
+  <link href="{% static 'index/style/style.css' %}" rel="stylesheet" />
+
+  <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
+  <link href="{% static 'index/style/lblue.css' %}" rel="stylesheet" />
+
+  <link href="{% static 'index/style/bootstrap-responsive.css' %}" rel="stylesheet" />
+
+  <!-- HTML5 Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="{% static 'index/index/js/html5shim.js' %}"></script>
+  <![endif]-->
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'index/img/favicon/Kafka.png'%}"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <style type="text/css">
+    .pretext {
+        background-color: #FFFFFF;
+        border-width: inherit;
+        font-size: inherit;
+        color: #777777;
+        font-family: 微软雅黑;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+    }
+    .titletext{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width:600px;
+    }
+    ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.activeli {
+    background-color: #5bbdec;
+    color: white;
+}
+    ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+    </style>
+
+<body>
+
+<!-- Header Starts -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <div class="logo">
+          <h1><a href="#">kafkal's <span class="color">blog</span></a></h1>
+          <div class="hmeta">独立思想,自由精神</div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="form">
+          <form method="get" id="searchform" action="#" class="form-search" />
+            <input type="text" value="" name="s" id="s" class="input-medium" />
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation bar starts -->
+          <div class="navbar">
+           <div class="navbar-inner">
+             <div class="container">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                 <span>Menu</span>
+               </a>
+               <div class="nav-collapse collapse">
+                 <ul class="nav">
+                   <li><a href="{% url 'index:index' %}">首页</a></li>
+                   <li><a href="{% url 'blog:index' %}">博客</a></li>
+                   <li><a href="{% url 'index:aboutus' %}">简介</a></li>
+                 </ul>
+               </div>
+              </div>
+           </div>
+         </div>
+
+<!-- Navigation bar ends -->
+
+<div class="content">
+  <div class="container">
+
+
+    <!-- Hero Unit -->
+
+    <div class="row center">
+      <div class="span12">
+
+        <div class="bor"></div>
+        <div class="bor"></div>
+            <h4>简介</h4>
+          <hr/>
+          <p>这个建站的人太懒了，什么都没写</p>
+      </div>
+    </div>
+<hr />
+
+<!-- Discover starts -->
+
+  <div class="discover">
+    <div class="row">
+      <div class="span12">
+        <h3>发现</h3>
+        <div class="big grey">多问多读多练</div>
+          <div class="dis-nav button">
+            <a href="#" id="one">Github</a>
+            <a href="https://stackoverflow.com/"id="two">Stack Overflow</a>
+          </div>
+
+          <div class="dis-content">
+            <div class="one">
+                <h3>Github</h3>
+                <h5>Build software better,together.</h5>
+                <p>GitHub Inc. is a web-based hosting service for version control using Git. </p>
+                <a class="btn btn-warning" onclick="window.open('https://github.com/')">访问</a>
+            </div>
+            <div class="two">
+                <h3>Stack Overflow</h3>
+                <p>Stack Overflow is a privately held website, the flagship site of the Stack Exchange Network,created in 2008 by Jeff Atwood and Joel Spolsky.It was created to be a more open alternative to earlier question and answer sites such as Experts-Exchange. The name for the website was chosen by voting in April 2008 by readers of Coding Horror, Atwood's popular programming blog.</p>
+                <a class="btn btn-warning" onclick="window.open('https://www.stackoverflow.com/')">访问</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Disconver ends -->
+  </div>
+</div>
+
+<!-- Social -->
+
+<div class="social-links">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+          <p class="big"><span>Follow Me On</span> <a href="https://github.com/mtp1997411" target="_blank"><i class="fa fa-github"></i>Github</a><a href="https://weibo.com/u/2211865032" target="_blank"><i class="fa fa-weibo"></i>Weibo</a>
+              <span>Relex</span><a href="https://music.163.com/#/playlist?id=423085978" target="_blank"><i class="fa fa-music"></i>网易云音乐</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="widgets">
+        <div class="span4">
+          <div class="fwidget">
+
+            <div class="col-l">
+              <h6>Downlaods</h6>
+              <ul>
+                <li><a href="#">Condimentum</a></li>
+                <li><a href="#">Etiam at</a></li>
+                <li><a href="#">Fusce vel</a></li>
+                <li><a href="#">Vivamus</a></li>
+                <li><a href="#">Pellentesque</a></li>
+              </ul>
+            </div>
+
+            <div class="col-r">
+              <h6>Support</h6>
+              <ul>
+                <li><a href="#">Condimentum</a></li>
+                <li><a href="#">Etiam at</a></li>
+                <li><a href="#">Fusce vel</a></li>
+                <li><a href="#">Vivamus</a></li>
+                <li><a href="#">Pellentesque</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="fwidget">
+            <h6>Categories</h6>
+            <ul>
+              <li><a href="#">Condimentum - Condimentum gravida</a></li>
+              <li><a href="#">Etiam at - Condimentum gravida</a></li>
+              <li><a href="#">Fusce vel - Condimentum gravida</a></li>
+              <li><a href="#">Vivamus - Condimentum gravida</a></li>
+              <li><a href="#">Pellentesque - Condimentum gravida</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="fwidget">
+            <h6>Recent Posts</h6>
+            <ul>
+              <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
+              <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
+              <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
+              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
+              <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="span12">
+          <div class="copy">
+            <h6>Metro <span class="color">Mania</span></h6>
+            <p>Copyright &copy; <a href="#">Your Site</a> - <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
+          </div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="{% static 'index/js/jquery.js'%}"></script>
+<script src="{% static 'index/js/bootstrap.js'%}"></script>
+<script src="{% static 'index/js/jquery.isotope.js'%}"></script> <!-- Isotope for gallery -->
+<script src="{% static 'index/js/jquery.prettyPhoto.js'%}"></script> <!-- prettyPhoto for images -->
+<script src="{% static 'index/js/jquery.cslider.js'%}"></script> <!-- Parallax slider -->
+<script src="{% static 'index/js/modernizr.custom.28468.js'%}"></script>
+<script src="{% static 'index/js/filter.js'%}"></script> <!-- Filter for support page -->
+<script src="{% static 'index/js/cycle.js'%}"></script> <!-- Cycle slider -->
+<script src="{% static 'index/js/jquery.flexslider-min.js'%}"></script> <!-- Flex slider -->
+
+<script src="{% static 'index/js/easing.js'%}"></script> <!-- Easing -->
+<script src="{% static 'index/js/custom.js'%}"></script>
+
+</div>
+</body>
+</html>

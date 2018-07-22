@@ -35,16 +35,10 @@
   <link rel="shortcut icon" href="{% static 'index/img/favicon/Kafka.png'%}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <style type="text/css">
-    .pretext {
-        background-color: #FFFFFF;
-        border-width: inherit;
-        font-size: inherit;
-        color: #777777;
-        font-family: 微软雅黑;
+    .hid {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        text-align: left;
     }
     .titletext{
         overflow: hidden;
@@ -109,7 +103,7 @@ ul.pagination li a.activeli {
                  <ul class="nav">
                    <li><a href="{% url 'index:index' %}">首页</a></li>
                    <li><a href="{% url 'blog:index' %}">博客</a></li>
-                   <li><a href="aboutus.html">简介</a></li>
+                   <li><a href="{% url 'index:aboutus' %}">简介</a></li>
                  </ul>
                </div>
               </div>
@@ -131,15 +125,11 @@ ul.pagination li a.activeli {
         <h4>博客</h4>
         <hr />
         <div class="bor"></div>
-        <ul>
           {% for blog in blog_list %}
-              <li><a href="{% url 'blog:detail' blog.id %}"><h5 style="float: left" class="titletext">{{ blog.title }}</h5><h6 style="float: right">{{ blog.date }}</h6></a></li>
-              <li></li>
-              <li></li>
-              <li><a href="{% url 'blog:detail' blog.id %}"><pre class="pretext">{{ blog.text }}</pre></a></li>
+              <div style="height: 50px;weight:100%;"><a href="{% url 'blog:detail' blog.id %}"><h5 style="float: left" class="titletext">{{ blog.title }}</h5><h6 style="float: right">{{ blog.date }}</h6></a></div>
+              <div style="height: 30px;weight:100%;" class="hid"><a href="{% url 'blog:detail' blog.id %}" style="color: #777777;float: left" class="hid">{{ blog.text }}</a></div>
               <hr />
           {% endfor %}
-        </ul>
       </div>  
     </div>
 <hr />
