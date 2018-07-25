@@ -129,11 +129,9 @@ ul.pagination li a.activeli {
 
         <div class="bor"></div>
         <div class="bor"></div>
-        <ul>
-            <li><h4>{{ blog.title }}</h4><h6 style="float: right">{{ blog.date }}</h6><h6 style="float: left">关键字：{{ blog.keywords }}</h6></li>
+            <h4>{{ blog.title }}</h4><h6 style="float: right">{{ blog.date }}</h6><h6 style="float: left">关键字：{{ blog.keywords }}</h6>
             <hr/>
-            <li>{{ blog.text|safe }}</li>
-        </ul>
+          <div align="left">{{ blog.text|safe }}</div>
       </div>
     </div>
 <hr />
@@ -280,7 +278,6 @@ ul.pagination li a.activeli {
 <script src="{% static 'index/js/filter.js'%}"></script> <!-- Filter for support page -->
 <script src="{% static 'index/js/cycle.js'%}"></script> <!-- Cycle slider -->
 <script src="{% static 'index/js/jquery.flexslider-min.js'%}"></script> <!-- Flex slider -->
-
 <script src="{% static 'index/js/easing.js'%}"></script> <!-- Easing -->
 <script src="{% static 'index/js/custom.js'%}"></script>
 
